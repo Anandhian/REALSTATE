@@ -1,9 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {assets} from '../assets/assets'
 
 const Navbar = () => {
 
     const [mobileMenu,setMobileMenu]=useState(false)
+    useEffect(()=>{
+        if(mobileMenu){
+            document.body.style.overflow='hidden'
+
+
+        }
+        else{
+   document.body.style.overflow='hidden'
+
+        }
+        return()=>{
+                        document.body.style.overflow='auto'
+        }
+
+    },[mobileMenu])
+
+
+
   return (
     <div className='absolute top-0 left-0 w-full z-0'>
         <div className='container bg-transparent mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32'>
