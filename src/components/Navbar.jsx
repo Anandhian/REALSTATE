@@ -4,23 +4,7 @@ import {assets} from '../assets/assets'
 const Navbar = () => {
 
     const [mobileMenu,setMobileMenu]=useState(false)
-    useEffect(()=>{
-        if(mobileMenu){
-            document.body.style.overflow='hidden'
-
-
-        }
-        else{
-   document.body.style.overflow='hidden'
-
-        }
-        return()=>{
-                        document.body.style.overflow='auto'
-        }
-
-    },[mobileMenu])
-
-
+   
 
   return (
     <div className='absolute top-0 left-0 w-full z-0'>
